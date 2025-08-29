@@ -1,0 +1,106 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4rem;
+    padding: 8rem 1rem;
+    min-height: 100dvh;
+    background-image: linear-gradient(var(--color-bck) 20%, #0003), url("../imgs/back-hero.webp");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow-x: clip;
+}
+
+.hero::after{
+    content:'';
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    top: -1px;
+    z-index: 3;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-size: 200% 120px;
+    background-position: 50% 100%;
+    background-image: url('../icons/shape.svg');
+}
+
+.hero-firm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4rem;
+    z-index: 5;
+}
+
+.hero__title {
+    color: var(--color-dom);
+    font-size: 4rem;
+    font-family: Blippo;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+.hero__slogan {
+    max-width: min(100%, 30rem);
+    color: var(--color-lgt);
+    font-size: 1rem;
+    animation: fade-in-bottom 3s ease 3s both;
+}
+
+.hero__cta {
+    margin: auto;
+    color: var(--color-bck);
+    background-color: var(--color-com);
+    animation: fade-in-bottom 3s ease 3s both;
+}
+
+.hero .social-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+    height: 100%;
+}
+
+.hero .social-info__link {
+    text-decoration: none;
+}
+
+.hero .social-info__item {
+    width: 1.5rem;
+}
+
+.hero .social-info__link .content {
+    fill: var(--color-lgt);
+}
+
+@media screen and (min-width: 1024px) {
+    .hero {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 6rem 15vw;
+    }
+
+    .hero::after {
+        background-size: 100% 150px;
+    }
+
+    .hero-firm {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .hero__cta {
+        margin: 0;
+        margin-right: auto;
+    }
+
+    .hero .social-info {
+        flex-direction: column;
+    }
+}

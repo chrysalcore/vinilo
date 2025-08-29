@@ -1,0 +1,77 @@
+.reservation {
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
+    color: var(--color-bon);
+    background-color: var(--color-drk);
+}
+
+.reservation-info {
+    flex: 1 0 min(100%, 15rem);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.reservation .contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.reservation .contact__item {
+    flex: 1 0 min(14rem, 100%);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.reservation .contact__img {
+    padding: 0.8rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--color-bck);
+    border-radius: 50%;
+    overflow: visible;
+}
+
+.reservation .contact__title {
+    color: var(--color-dom);
+}
+
+.reservation .form {
+    flex: 1 0 min(100%, 15rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.reservation .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+}
+
+.reservation .form-field__text {
+    display: none;
+}
+
+.reservation .form-field__input {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    color: var(--color-bon);
+    background-color: #fff2;
+    border: none;
+    border-radius: 3rem;
+}
+
+.reservation .form-field__input::placeholder {
+    color: #fff7;
+}
+
+.reservation .form__btn {
+    color: var(--color-bck);
+    background-color: var(--color-com);
+}
