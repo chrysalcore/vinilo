@@ -20,21 +20,21 @@ function Gallery() {
     ]
 
     return (
-        <section class="gallery section">
-            <header class="section-header">
-                <h2 class="section__title">Instantáneas de Sabor</h2>
-                <p class="section__desc">Echa ya un vistazo nuestras creaciones, el ambiente acogedor y los momentos que definen la experiencia Vinilo</p>
+        <section className="gallery section">
+            <header className="section-header">
+                <h2 className="section__title">Instantáneas de Sabor</h2>
+                <p className="section__desc">Echa ya un vistazo nuestras creaciones, el ambiente acogedor y los momentos que definen la experiencia Vinilo</p>
             </header>
-            <ul class="gallery-list">
+            <ul className="gallery-list">
                 {items.map(item => {
                     return (
-                        <li class="gallery-list__item">
+                        <li className="gallery-list__item" key={item.title}>
                             <picture className='gallery-list__pict'>
-                                <img className='gallery-list__img' src={new URL(`/src/assets/imgs/${item.img}`, import.meta.url)} alt="offers icon" />
+                                <img loading='lazy' className='gallery-list__img' src={new URL(`/src/assets/imgs/${item.img}`, import.meta.url)} alt="offers icon" />
                             </picture>
                             <div className='gallery-list__text'>
-                                <h3 class="gallery-list__title">{item.title}</h3>
-                                <p class="gallery-list__desc">{item.desc}</p>
+                                <h3 className="gallery-list__title">{item.title}</h3>
+                                <p className="gallery-list__desc">{item.desc}</p>
                             </div>
                         </li>
                     )

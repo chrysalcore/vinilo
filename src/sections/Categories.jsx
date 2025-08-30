@@ -37,9 +37,9 @@ function Categories() {
             <ul className="categories-list">
                 {data.map(item => {
                     return (
-                        <li className="category">
+                        <li className="category" key={item.name}>
                             <a href={item.href} className="category__link">
-                                <img className="category__icon" src={new URL(`../assets/icons/${item.src}`, import.meta.url)} alt={`${item.name} icon`} />
+                                <img loading="lazy" className="category__icon" src={new URL(`../assets/icons/${item.src}`, import.meta.url)} alt={`${item.name} icon`} />
                                 <h3 className="category__name">{item.name}</h3>
                                 <p className="category__desc">{item.desc}</p>
                             </a>

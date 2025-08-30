@@ -5,7 +5,7 @@ function Nav(props) {
                 {props.list.map(item => {
                     return (
                         <li className="nav-list__item" key={item.text}>
-                            <a href={item.href} className="nav-list__link">{item.text}</a>
+                            <a href={item.href} className="nav-list__link" rel="noopener norreferer">{item.text}</a>
                         </li>
                     )
                 })}
