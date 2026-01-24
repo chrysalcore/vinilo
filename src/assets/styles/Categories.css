@@ -50,3 +50,33 @@
     animation-timeline: view();
     animation-range-end: contain 60%;
 }
+
+.categories-brief {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 3rem;
+    padding: 1rem 3rem;
+    max-width: 100dvw;
+    background-color: #d4af3722;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-snap-type: mandatory;
+}
+
+.categories-brief__item {
+    text-transform: capitalize;
+    scroll-snap-align: center;
+    transition: scale 0.5s, padding 0.5s;
+}
+
+.categories-brief__item.active {
+    font-weight: 700;
+    scale: 1.3;
+}
+
+@media screen and (min-width: 768px) {
+    .categories-brief {
+        justify-content: center;
+        border-radius: 4rem;
+    }
+}

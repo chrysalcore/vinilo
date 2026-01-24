@@ -1,22 +1,34 @@
+import { Outlet } from 'react-router-dom'
+import { DataProvider } from './context/dataContext'
+import useConnect from './hooks/useConnect'
 import './App.css'
-import Header from './sections/Header'
-import Hero from './sections/Hero'
-import Categories from './sections/Categories'
-import About from './sections/About'
-import Gallery from './sections/Gallery'
-import Reservation from './sections/Reservation'
-import Footer from './sections/Footer'
+import Header from './components/sections/header/Header'
+import Hero from './components/sections/hero/Hero'
+import Footer from './components/sections/footer/Footer'
+import Loading from './components/global/Loading'
 
 function App() {
+  const [
+    data,
+    loading,
+    error
+  ] = useConnect('https://devsapihub.com/api-fast-food')
+
+  const categories = [...new Set(data.map(item => item.category))]
+
   return (
     <>
       <Header />
       <main className='main'>
         <Hero />
-        <Categories />
-        <About />
-        <Gallery />
-        <Reservation />
+        {
+          loading?
+            <Loading />
+            :
+            <DataProvider value={{ categories, data }} >
+              <Outlet />
+            </DataProvider>
+        }
       </main>
       <Footer />
     </>

@@ -1,15 +1,14 @@
 .about {
-    flex-direction: column;
-    align-items: center;
     gap: 1.5rem;
     min-height: 90dvh;
     color: var(--color-bon);
     background: var(--color-drk);
-    position: relative;
 }
 
 .about-img {
-    width: 140%;
+    flex: 1 0 min(25rem, 100%);
+    display: none;
+    max-width: 30rem;
     aspect-ratio: 1;
     background-image: url('../imgs/about.png');
     background-position: center;
@@ -19,12 +18,14 @@
     z-index: 90;
 }
 
-.about-text {
+.about-content { 
+    flex: 1 0 min(25rem, 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 1rem;
+    max-width: 30rem;
     position: relative;
     z-index: 50;
 }
@@ -38,17 +39,18 @@
     max-width: 40rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1400px) {
     .about {
         flex-direction: row;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .about-img {
-        width: 50%;
+        display: block;
     }
 
-    .about-text {
+    .about-content {
         width: 40%;
     }
 }

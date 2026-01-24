@@ -1,0 +1,6 @@
+const data = [
+    'Hace apenas seis meses, Vinilo nació de una simple pero apasionada idea: fusionar dos grandes placeres de la vida, la buena música y la mejor pizza. Inspirados por la calidez y autenticidad de las viejas vinylerías y las pizzerías de barrio, creamos un espacio donde el crujido de la masa se mezcla con el sonido característico de un disco girando. Cada rincón de nuestro local está impregnado de nostalgia, desde las portadas de álbumes icónicos que decoran las paredes hasta la cuidadosa selección musical que ambienta tu comida.',
+    'En la cocina, somos tan meticulosos como un coleccionista con sus discos. Seleccionamos ingredientes de primera calidad para asegurar que cada pizza que sale de nuestro horno sea un hit. Aunque somos nuevos en la escena, nuestro compromiso es con el sabor de siempre, buscando convertirnos en ese lugar clásico al que siempre querrás volver, como esa canción que nunca te cansas de escuchar. Vinilo: buena música, mejor pizza.'
+]
+
+export default data

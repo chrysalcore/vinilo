@@ -23,8 +23,9 @@
     z-index: 3;
     pointer-events: none;
     background-repeat: no-repeat;
-    background-size: 200% 120px;
-    background-position: 50% 100%;
+    background-size: 150% 60px;
+    background-position: 0% 100%;
+    transform: rotateY(180deg);
     background-image: url('../icons/shape.svg');
 }
 
@@ -53,9 +54,6 @@
 }
 
 .hero__cta {
-    margin: auto;
-    color: var(--color-bck);
-    background-color: var(--color-com);
     animation: fade-in-bottom 3s ease 3s both;
 }
 
@@ -63,7 +61,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 4rem;
+    gap: 3rem;
     height: 100%;
 }
 
@@ -87,7 +85,7 @@
     }
 
     .hero::after {
-        background-size: 100% 150px;
+        background-size: 100% 100px;
     }
 
     .hero-firm {
